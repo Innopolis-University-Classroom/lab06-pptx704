@@ -22,16 +22,18 @@ public class TestCurrencyConverter {
 
      CurrencyConverter currency = new CurrencyConverter();
 
-     //converting usd to rouble
+     //converting rouble to usd
 
-     float convertedUsd = currency.convert(1, "rouble", "usd")
+     float convertedUsd = currency.convert(1, "rouble", "usd");
 
-     boolean isGreaterThanOne = convertedUsd > 1.f;
+     boolean isGreaterThanOne = convertedUsd > 80f;
 
-     boolean isLessThanTwenty = convertedUsd < 20.f;
+     boolean isLessThanTwenty = convertedUsd < 85f;
 
      // action
      // Main.main(null);
+
+     assertTrue(currency.convert(5, "chf", "kwd") >= 0.73);
 
      assertTrue(isGreaterThanOne);
      assertTrue(isLessThanTwenty);
